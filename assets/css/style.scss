@@ -1,0 +1,399 @@
+$main-color: #0867b4;
+$second-color: orange;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: Tahoma;
+    background-color: #f4efef;
+    font-size: 1.6rem;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.banner {
+    background-color: $main-color;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+header {
+    position: sticky;
+    z-index: 20;
+    top: 0;
+    margin-bottom: 0.2rem;
+    background-color: $main-color;
+    height: 5rem;
+    align-items: center;
+
+    ul {
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+        li:first-child {
+            margin: 0 11.9rem;
+            a {
+                img {
+                    height: 4rem;
+                    border-radius: 1rem;
+                    transition: all 0.9s ease;
+                    &:hover {
+                        transform: rotate(359deg);
+                    }
+                }
+            }
+        }
+        li:not(:first-child) {
+            padding: 0 3rem;
+            height: 5rem;
+            color: #fff;
+            line-height: 5rem;
+            text-align: center;
+            transition: all 0.4s linear;
+            a {
+                color: #fff;
+            }
+        }
+        li:hover:not(:first-child) {
+            background-color: $second-color;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.wrapper {
+    width: 98rem;
+    margin: 0 auto;
+    .sell {
+        position: fixed;
+        right: 29%;
+        bottom: 20%;
+        font-size: 3rem;
+        color: green;
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        min-height: 150vh;
+
+        .sidebar {
+            background-color: #fff;
+            flex-basis: 22.5rem;
+            margin-right: 1.5rem;
+
+            h4 {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 20px;
+                background-color: $main-color;
+                color: #fff;
+            }
+            li {
+                padding: 5px 20px;
+                transition: all 0.3s ease;
+                a {
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    transition: all 0.3s ease;
+                    color: #0867b4;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &:hover {
+                    text-decoration: none;
+                    background-color: orange;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+            li:not(:last-child) {
+                border-bottom: 1px dotted #000;
+            }
+            .support {
+                .fa-facebook-messenger,
+                .fa-skype {
+                    color: #0a92ff;
+                    font-size: 1.9rem;
+                    transition: all 0.3s ease;
+                }
+                li {
+                    &:hover a {
+                        background-color: orange;
+                    }
+                }
+            }
+            .link-web {
+                a {
+                    font-size: 1.5rem;
+                    padding-left: 2rem;
+                    color: #0867b4;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: #f00;
+                    }
+                }
+            }
+        }
+        .content {
+            flex-basis: 74rem;
+            h4 {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 20px;
+                background-color: $main-color;
+                color: #fff;
+            }
+            background-color: #fff;
+            .slide {
+                max-width: 72rem;
+                .owl-carousel {
+                    margin: 0 10px;
+                    .slide-detail {
+                        margin-right: 10px;
+                        text-align: center;
+                        border: 1px solid $main-color;
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .price-list {
+                th,
+                td {
+                    padding: 5px;
+                }
+                white-space: 2px;
+                .row-main {
+                    color: #fff;
+                    background-color: $main-color;
+                }
+                th:first-child,
+                td:first-child {
+                    text-align: center;
+                }
+                a {
+                    display: block;
+                    margin: 2rem 0;
+                    padding: 1rem;
+                    border: 1px solid #000;
+                    text-align: center;
+                    color: $main-color;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                    &:hover {
+                        border: 1px solid #000;
+                        color: white;
+                        background-color: $main-color;
+                    }
+                }
+            }
+            .list-product {
+                margin-top: 2rem;
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                li {
+                    flex-basis: 32%;
+                    max-width: 24rem;
+                    max-height: 26rem;
+                    color: yellow;
+                    border: 1px solid #ccc;
+                    overflow: hidden;
+                    margin-bottom: 2rem;
+                    a {
+                        text-decoration: none;
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            transition: all 0.3s ease;
+                        }
+                        &:hover {
+                            color: orange;
+                            img {
+                                transform: scale(1.03);
+                            }
+                        }
+                    }
+                }
+                .page-detail {
+                    margin: 0 auto;
+                    width: 35%;
+                    padding-bottom: 10px;
+                    a {
+                        text-decoration: none;
+                        color: orange;
+                        margin: 3px;
+                    }
+                }
+            }
+        }
+        // Scss for purchase
+        .purchase {
+            line-height: 1.5;
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+            p,
+            h3 {
+                padding: 1rem;
+                padding: 1rem;
+            }
+
+            ol {
+                padding-left: 5rem;
+            }
+            li {
+                text-decoration: underline;
+                cursor: pointer;
+                padding: 1rem;
+            }
+        }
+        // Scss for guarantee(bảo hành)
+        .guarantee-info {
+            background-color: #ccc;
+            box-shadow: 0 0 5px $main-color;
+            margin: 15px 0;
+            padding: 20px 10px;
+        }
+        // Scss for contact
+        .contact {
+            padding: 1rem;
+            h4 {
+                color: red;
+            }
+        }
+        .gg-map {
+            padding: 1rem;
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $main-color;
+    height: 13rem;
+    width: 100%;
+    .footer-detail {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            flex-basis: 60%;
+            li {
+                margin-right: 1rem;
+                a {
+                    color: #fff;
+                    padding-right: 1rem;
+                    border-right: 2px solid #fff;
+                    transition: all 0.3s linear;
+                    &:hover {
+                        color: #f00;
+                        text-decoration: none;
+                        border-right: 2px solid #f00;
+                    }
+                }
+            }
+        }
+        .info-contact {
+            word-spacing: 1.5px;
+            padding-left: 10rem;
+            flex-basis: 40%;
+            font-size: 1.4rem;
+            color: #fff;
+            a {
+                transition: all 0.3s linear;
+                color: #fff;
+                &:hover {
+                    color: #f00;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    height: 4rem;
+    padding: 0 3rem;
+    font-size: 1.4rem;
+    background-color: orange;
+    color: $main-color;
+    line-height: 4rem;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// Scss for resposive
+
+/* Scss for responsive  */
+@media screen and (max-width: 1024px) {
+    .wrapper {
+      width: 100%;
+    }
+    .list-menu {
+      display: none;
+    }
+    .sidebar {
+      display: none;
+    }
+    .footer-list{
+      display: none;
+    }
+    .copyright{
+      display: none;
+    }
+    .content{
+        .product-representative{
+            display: none;
+        }
+    }
+    .slide{
+      display: none;
+    }
+  }
+  
+  
+  @media screen and (max-with: 740px) {
+      
+    .price-list{
+        display: none;
+    }
+  }
+  @media screen and (min-with: 740px) and (max-width: 1024px) {
+    .banner img{
+      display: none;
+    }
+      .content{
+        .list-product{
+            li{
+                flex-basis: 50%;
+            }
+        }
+      }
+    
+  }
